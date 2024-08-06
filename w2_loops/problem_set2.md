@@ -83,4 +83,6 @@ dictionary = {"key1": "value1", "key2": "value2"}
 if fruit in fruit_dict:
 	return fruit_dict[fruit]
 ```
+<br>
+
 > For the function not to return dictionary value: In `main()`, only print `if result != None`
