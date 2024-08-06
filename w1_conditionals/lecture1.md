@@ -1,7 +1,7 @@
 # CS50P W1 - Conditionals
 
 ## `if` Statements
-```python
+```py
 if x < y: 
     …
 elif x > y:
@@ -9,19 +9,19 @@ elif x > y:
 else : 
     …
 ```
-```python
+```py
 if x < y or x > y:
 	…
 else:
     …
 ```
-```python
+```py
 if x != y:
     …
 else:
     …
 ```
-```python
+```py
 if score >= 90 and score <= 100:
 	…
 if 90 <= score <= 100:
@@ -37,7 +37,7 @@ Remainder of dividing two numbers not evenly
 3 % 2 = 1 (dividing 3/2 = 1.5, the quotient is 1 and the remainder 0.5 x 2 = 1)
 16 % 5 = 1 (dividing 16/5 = 3.2, the quotient is 3 and the remainder 0.2 x 5 = 1)
 ```
-```python
+```py
 if x % 2 == 0:
 	print("Even")
 else:
@@ -45,7 +45,7 @@ else:
 ```
 
 ### `bool`
-```python
+```py
 def is_even(n):
     if n % 2 == 0:
  		return True
@@ -54,7 +54,7 @@ def is_even(n):
 ```
 
 **Pythonic syntax**
-```python 
+```py 
 def is_even(n):
     return True if n % 2 == 0 else False
 
@@ -71,7 +71,7 @@ if is_even(x):
 <br>
 
 1. 
-```python
+```py
 name = input("What’s your name? ")
 
 if name == "Harry": 
@@ -88,7 +88,7 @@ else :
 <br>
 
 2. 
-```python
+```py
 name = input("What's your name? ")
 
 if name == "Harry" or "Hermione" or "Draco": 
@@ -101,7 +101,7 @@ else :
 <br>
 
 3.  `match`
-```python
+```py
 name = input("What’s your name? ")
 
 match name:
@@ -119,7 +119,7 @@ case _:
 <br>
 
 4.
-```python
+```py
 match name:
     case "Harry" | "Hermione" | "Ron":
 		print("Gryffindor")
@@ -131,7 +131,7 @@ match name:
 <br>
 
 ## Error Checking
-```python
+```py
 def main():
 	difficulty = ("Enter level: ")
 	if not (difficulty == "Difficult" or difficulty == "Casual"):
@@ -141,7 +141,7 @@ def main():
 <br>
 
 1. 
-```python
+```py
 if difficulty == "Difficult":
 	if players == "Multiplayer":
 		recommend("Poker")
@@ -149,7 +149,7 @@ if difficulty == "Difficult":
 <br>
 
 2. 
-```python
+```py
 if difficulty == "Difficult" and players == "Multiplayer":
 	recommend("Poker")
 ```

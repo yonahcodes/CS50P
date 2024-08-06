@@ -2,7 +2,7 @@
 
 ## Deep Thought
 Implement a program that prompts the user for the answer to the Great Question of Life, the Universe and Everything, outputting `Yes` if the user inputs `42` or (case insensitively) `forty-two` or `forty two`. Otherwise `No`.
-```python
+```py
 .lower()
 
 .strip()
@@ -15,7 +15,7 @@ Implement a program that prompts the user for a greeting. If the greeting starts
 - Ignore leading whitespace
 - case-insensitive
 
-```python
+```py
 .strip()
 
 .lower()
@@ -36,7 +36,7 @@ Implement a program that prompts the user for the name of a files and then outpu
 .zip = application/zip
 ```
 If the file name ends with some other suffix at all, output `application/octet-stream` instead.
-```python
+```py
 partition(".") # Splits string at first dot . 
 
 rpartition(".") # Splits string at last dot .
@@ -54,7 +54,7 @@ X is an integer
 Y is +,-,*, or /
 Z is an integer
 ```
-```python
+```py
 .split(" ")
 
 return f"{result:.1f}"

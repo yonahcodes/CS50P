@@ -2,63 +2,63 @@
 <br>
 
 **Concatenation**
-```python
+```py
 print("hello, " + name)
 ```
 <br>
 
 **F-string**
-```python
+```py
 print(f"hello, {name}")
 ```
 <br>
 
 **Adds space automatically `sep=" "`**
-```python
+```py
 print("hello, ", name)
 ```
 <br>
 
 **Replace automatic new line `end="\n"`**
-```python
+```py
 print("hello, ", end="")
 print(name)
 ```
 <br>
 
 **Print `""` inside of `" "`** 
-```python
+```py
 print('hello, "friend"') or print("hello, \"friend\"") 
 ```
 <br>
 
 **Remove `char` from string**
-```python 
+```py 
 name = name.remove("c")
 print(f"hello, {name}")
 ```
 <br>
 
 **Remove whitespace before and after word**
-```python
+```py
 name = name.strip()
 print(f"hello, {name}")
 ```
 <br>
 
 **Remove prefix** 
-```python
+```py
 str.removeprefix("$")
 ```
 
 **Remove suffix**
-```python 
+```py 
 str.removesuffix("%")
 ```
 <br>
 
 **Replace one argument by another**
-```python 
+```py 
 s = "hello world"
 s = s.replace(" ", "...")
 ```
@@ -69,21 +69,21 @@ Output:
 <br>
 
 **Capitalize first letter of first word**
-```python 
+```py 
 name = name.capitalize()
 print(f"hello, {name}")
 ```
 <br>
 
 **Capitalize first letter of each word**
-```python 
+```py 
 name = name.title()
 print(f"hello, {name}")
 ```
 <br>
 
 **Combine several methods** 
-```python
+```py
 name = name.strip().title()
 or
 name = input("What's your name? ").strip().title()
@@ -91,7 +91,7 @@ name = input("What's your name? ").strip().title()
 <br>
 
 **Split sentences**
-```python	
+```py	
 first, last = name.split(" ")
 print(f"hello, {first}")
 ```
@@ -105,14 +105,14 @@ print(f"hello, {first}")
 <br>
 
 **Convert user input to `int` or `float`** 
-```python
+```py
 x = int(input("What's x? "))
 x = float(input("What's x? "))
 ```
 <br>
 
 **Round float to the nearest integer** 
-```python
+```py
 x = float(input("What's x? "))
 y= float(input("What's y "))
 z = round(x + y)
@@ -120,7 +120,7 @@ z = round(x + y)
 <br>
 
 **Specify the number of digits to round to** 
-```python
+```py
 round(number[n, ndigits])
 z = round(x / y, 2)
 or
@@ -129,13 +129,13 @@ print(f"{z:.2f}")
 <br>
 
 **Format long numbers to include commas or points** 
-```python
+```py
 print(f"{z:,}")
 ```
 <br>
 
 **Define our own function** 
-```python
+```py
 def function_name():
 	...
 	...
@@ -145,7 +145,7 @@ def hello(to):
 <br>
 
 **Assign a default value to the parameter `to`** 
-```python
+```py
 def hello(to="world")
     print("hello,", to)
 
@@ -156,7 +156,7 @@ hello(name)
 <br>
 
 **Define a `main()` function** 
-```python	
+```py	
 def main():
 	name = input("What's your name? ")
 	hello(name)
@@ -171,7 +171,7 @@ main()
 <br>
 
 **Define a function that returns square of `n`**
-```python
+```py
 def square(n):
 	return n * n
 	or
@@ -180,14 +180,14 @@ def square(n):
 <br>
 
 **Define a function to raise to the power of 2** 
-```python
+```py
 def power(n):
 	return n ** 2
 ```
 <br>
 
 **Split a camel case string (camelCaseString) into several substrings (`regex`)** 
-```python
+```py
 import re
 
 def split_camel_case(s):
@@ -196,13 +196,13 @@ def split_camel_case(s):
 <br>
 
 **Concatenate all elements of a list into a single string**
-```python	
+```py
 "<Separator>".join(list)
 ```
 <br>
 
 **Iterate through a string to find vowels**
-```python 
+```py
 def vowelless():
 	vowels = ["A", "a", "E", "e", "I", "i", "O", "o", "U", "u"]
 	for c in txt:
@@ -212,7 +212,7 @@ def vowelless():
 <br>
 
 **Irritate through each index `[i]` and character `c` in a string**
-```python
+```py
 for i, c in enumerate(string):
     …
 ```

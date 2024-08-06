@@ -27,7 +27,7 @@ s = s.replace(":(", "😕")
 
 Implement a program in Python that prompts the user for mass as an integer (in kilograms) and then outputs the equivalent number of Joules as an integer. 
 - Assume that the user will input an integer.
-```python
+```py
 pow(number, exponent)
 ```
 <br>
@@ -37,7 +37,7 @@ Implement a function `dollar_to_foat()` that accepts a str as input (formatted `
 
 
 Implement a function `percent_to_float()` that accepts a str as input (formatted `##%`, where each # is a decimal digit), remove the trailing `%`, and return the percentage as a `float`. (15% should return 0.15)
-```python
+```py
 str.removeprefix("$")
 
 str.removesuffix("%")
