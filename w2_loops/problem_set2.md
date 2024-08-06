@@ -4,11 +4,14 @@
 Implement a program that prompts the user for the name of a variable in **camel case** and outputs the corresponding name in **snake case**. Assume that the user's input will indeed be in camel case.
 ```py
 for c in list[1:] # Starting at second character
-
+```
+```py
 list.append(word)
-
+```
+```py
 .lower()
-
+```
+```py
 "_".join(list) # Joins list elements into a string with specified separator
 ```
 <br>
@@ -23,9 +26,11 @@ Implement a program that prompts the user to insert a coin, one at a time, each 
 ```py
 while count < 50:
     …
-
+```
+```py
 if coin == 25 or coin == 10 …
-
+```
+```py
 # Ensure the change is not negative
 print(f"Change Owed: {count -  50}")
 ```
@@ -35,7 +40,8 @@ print(f"Change Owed: {count -  50}")
 Implement a program that prompts the user for a `str` of text and then outputs that same text but with all vowels `A, E, I, O, and U` omitted, whether imputed in uppercase or lowercase.
 ```py
 .append()
-
+```
+```py
 "".join(list)
 ```
 <br>
@@ -67,7 +73,8 @@ if c.isdigit():
         return False
     elif c != "0":
         zero_digit_found = True
-
+```
+```py
 for i, c in enumerate(s)
 ```
 <br>

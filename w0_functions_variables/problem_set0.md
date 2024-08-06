@@ -4,13 +4,18 @@
 - Prompt for input and output sale input in lowercase
 - Punctuation and whitespace unchanged
 - define and call `main()` 
-- `lower()`
+```py
+lower()
+```
 <br>
 
 ## Playback Speed
 Prompt user for input and output, same input replacing spaces with "..." 
-- replace(old, new)
-- replace(" ", "...")
+```py
+replace(old, new)
+
+replace(" ", "...")
+```
 <br>
 
 ## Making Faces
@@ -39,8 +44,10 @@ Implement a function `dollar_to_foat()` that accepts a str as input (formatted `
 Implement a function `percent_to_float()` that accepts a str as input (formatted `##%`, where each # is a decimal digit), remove the trailing `%`, and return the percentage as a `float`. (15% should return 0.15)
 ```py
 str.removeprefix("$")
-
+```
+```py
 str.removesuffix("%")
-
+```
+```py
 float()
 ```

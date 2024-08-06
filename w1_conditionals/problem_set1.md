@@ -4,7 +4,8 @@
 Implement a program that prompts the user for the answer to the Great Question of Life, the Universe and Everything, outputting `Yes` if the user inputs `42` or (case insensitively) `forty-two` or `forty two`. Otherwise `No`.
 ```py
 .lower()
-
+```
+```py
 .strip()
 ```
 <br>
@@ -17,9 +18,11 @@ Implement a program that prompts the user for a greeting. If the greeting starts
 
 ```py
 .strip()
-
+```
+```py
 .lower()
-
+```
+```py
 startswith()
 ```
 <br>
@@ -38,9 +41,11 @@ Implement a program that prompts the user for the name of a files and then outpu
 If the file name ends with some other suffix at all, output `application/octet-stream` instead.
 ```py
 partition(".") # Splits string at first dot . 
-
+```
+```py
 rpartition(".") # Splits string at last dot .
-
+```
+```py
 media = f"image/{suffix}"
 ```
 <br>
@@ -56,7 +61,8 @@ Z is an integer
 ```
 ```py
 .split(" ")
-
+```
+```py
 return f"{result:.1f}"
 ```
 <br>
