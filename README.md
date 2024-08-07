@@ -84,6 +84,5 @@ In this repository I will be documenting my progress in Harvard University's int
 
 - Lecture 6 - [Official Notes](https://cs50.harvard.edu/python/2022/notes/6/) - [Notes](w6_file-io/lecture6.md)
 
-- Problem Set 6 - [notes](w6_file-io/problem_set6.md)
+- Problem Set 6 - [Notes](w6_file-io/problem_set6.md)
   - [Lines of Code](w6_file-io/lines/lines.py)
-  

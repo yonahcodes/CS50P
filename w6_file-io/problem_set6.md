@@ -30,6 +30,9 @@ Assume that any line that only contains whitespace is blank.
         # if a line only contains whitespace = blank
 ```
 ```py
+import sys
+```
+```py
 lstrip()
 ```
 ```py
