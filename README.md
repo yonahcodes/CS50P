@@ -82,6 +82,6 @@ In this repository I will be documenting my progress in Harvard University's int
 
 ## [6 - File I/O](https://cs50.harvard.edu/python/2022/weeks/6/)
 
-- Lecture 6 - [Official Notes](https://cs50.harvard.edu/python/2022/notes/6/) - [Notes](w6_file_i-o/lecture6.md)
+- Lecture 6 - [Official Notes](https://cs50.harvard.edu/python/2022/notes/6/) - [Notes](w6_file-io/lecture6.md)
 
 - Problem Set 6
