@@ -148,7 +148,7 @@ except IndexError:
 
 ```py
 except IndexError as e: 
-    print(“Too few arguments”)
+    print("Too few arguments")
 ```
 > Using `as e` in a try and except block will **bind the exception** that was raised **to the variable `e`**, which allows access and manipulate the exception object within the except block.
 
@@ -189,7 +189,7 @@ print("hello, my name is", sys.argv[1])
 import sys
 
 if len(sys.argv) < 2:
-    sys.exit("Too few arguments)
+    sys.exit("Too few arguments")
 
 for arg in sys.argv:
     print("hello, my name is", arg)
