@@ -2,7 +2,7 @@
 
 ![CS50P](img/cs50p.png)
 
-## Welcome to Lazer's CS50 Repository
+## Welcome to Lazer's CS50P Repository
 
 ### [Academic Honesty](https://cs50.harvard.edu/python/2022/honesty/)
 
