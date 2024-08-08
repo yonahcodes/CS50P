@@ -13,7 +13,7 @@ def main():
         python_file = sys.argv[1]
 
         # If file name does not end in `.py`
-        if not sys.argv[1].endswith(".py"):
+        if not python_file.endswith(".py"):
             sys.exit("Not a Python file")
 
         # Return number of lines of code in file

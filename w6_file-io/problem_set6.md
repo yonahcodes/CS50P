@@ -47,3 +47,32 @@ readlines()
 ```py
 raise FileNotFoundError
 ```
+<br>
+
+## Pizza Py
+Implement a program that expext one command-line argument, the name (or path) of a **CSV** file in Pinocchio's format, and outputs a table formatted as **ASCII** art using `tabulate`, a package on PyPI at pypi.org/project/tabulate.
+
+- Format the tables using the library's `grid`format. 
+
+- If the user does not specify exactly one command-line argument, or if the specified file's name does not end in `.csv`, of if the specified files does not exist:
+    - The program should instead exit via `sys.exit`.
+
+<br>
+
+```py
+import csv
+import sys
+from tabulate import tabulate
+```
+```py
+tabulate(table, headers="keys", tablefmt="grid")
+```
+```py
+reader = csv.DictReader(file)
+for row in reader:
+    table.append(row)
+```
+```py
+except FileNotFoundError:
+    raise FileNotFoundError("File does not exist")
+```
