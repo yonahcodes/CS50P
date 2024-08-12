@@ -111,3 +111,58 @@ except FileNotFoundError:
 ```
 <br>
 
+## CS50P P-Shirt
+Implement a program that expects exactly two command-line arguments:
+- in sys.argv[1], the name (or path) of a JPEG or PNG to read (i.e, open) as input
+- in sys.argv[2], the name (or path) of a JPEG or PNG to write (i.e, save) as output
+
+The program should then overlay `shirt.png` (which has a transparent background) on the input after resizing and cropping the input to be the same size, saving the result as its ouput.
+
+1. Open the input with `Image.open`, per `pillow.readthedocs.io/en/stable/reference/Image.html#PIL.Image.open`
+
+2. Resize and crop the input with `ImageOps.fit`, per `pillow.readthedocs.io/en/stable/reference/ImageOps.html#PIL.ImageOps.fit`, using default values for `method`, `bleed`, and `centering`
+
+3. Overlay the shirt with `Image.paste`, per `pillow.readthedocs.io/en/stable/reference/Image.html#PIL.Image.Image.paste`
+
+4. Save the result with `Image.save`, per `pillow.readthedocs.io/en/stable/reference/Image.html#PIL.Image.Image.save`.
+
+<br>
+
+The program should instead exit via `sys.exit`:
+- if the user does not specify exactly two command-line arguments,
+- if the input’s and output’s names do not end in .jpg, .jpeg, or .png, case-insensitively,
+- if the input’s name does not have the same extension as the output’s name, or
+- if the specified input does not exist.
+
+<br>
+
+Assume that the input will be a photo of someone posing in just the right way, so that, when they’re resized and cropped, the shirt appears to fit perfectly.
+<br>
+
+```py
+import os
+from PIL import Image, ImageOps
+import sys
+```
+```py
+# Ensure files have supported extensions
+if not any(input_img.endswith(ext) for ext in extensions):
+    sys.exit("Invalid input")
+```
+```py
+# Ensure input and output files extensions match
+if os.path.splitext(input_img)[1] != os.path.splitext(output_img)[1]:
+    sys.exit("Input and Output have different extensions")
+```
+```py
+with Image.open(input_img) as image, Image.open("shirt.png") as shirt:
+    # Resize the input image to fit shirt size
+    size = shirt.size
+    image = ImageOps.fit(image, size)
+
+    # Paste the shirt image onto the resizer input image using shirt as a mask
+    image.paste(shirt, (0, 0), shirt)
+
+    # Save final image
+    image.save(output_img)
+```
