@@ -88,3 +88,4 @@ In this repository I will be documenting my progress in Harvard University's int
   - [Lines of Code](w6_file-io/lines/lines.py)
   - [Pizza Py](w6_file-io/pizza/pizza.py)
   - [Scourgify](w6_file-io/scourgify/scourgify.py)
+  - [CS50 P-Shirt](w6_file-io/shirt/shirt.py)
