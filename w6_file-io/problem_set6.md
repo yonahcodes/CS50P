@@ -85,3 +85,29 @@ Implement a program that expects the user to provide two comand-line arguments:
 
 If the user does not provide exactly two command-line arguments, or if the first cannot be read, the program should exit via `sys.exit`with an error message.
 
+<br>
+
+<br>
+
+```py
+import csv
+import sys
+```
+```py
+clean_data(input_csv, output_csv)
+```
+```py
+with open(input_csv, "r") as input_file, open(output_csv, "w", newline='') as output_file:
+```
+```py
+for row in reader:
+last, first = row["name"].strip('"').split(",")
+house = row["house"]
+writer.writerow({"first": first.strip(), "last": last.strip(), "house":house})
+```
+```py
+except FileNotFoundError:
+    sys.exit(f"Could not read file {input_csv}")
+```
+<br>
+
