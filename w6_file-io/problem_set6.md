@@ -76,3 +76,12 @@ for row in reader:
 except FileNotFoundError:
     raise FileNotFoundError("File does not exist")
 ```
+<br>
+
+## Scourgify
+Implement a program that expects the user to provide two comand-line arguments:
+- The name of an existing CSV file to read as input, whose columns are assumed to be, in order, `name` and `house`, and
+- The name of a new CSV to write as output, whose columns should be, in order, `first`, `last`, and `house`.
+
+If the user does not provide exactly two command-line arguments, or if the first cannot be read, the program should exit via `sys.exit`with an error message.
+
