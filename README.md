@@ -89,3 +89,10 @@ In this repository I will be documenting my progress in Harvard University's int
   - [Pizza Py](w6_file-io/pizza/pizza.py)
   - [Scourgify](w6_file-io/scourgify/scourgify.py)
   - [CS50 P-Shirt](w6_file-io/shirt/shirt.py)
+  <br><br>
+
+## [7 - Regular Expressions](https://cs50.harvard.edu/python/2022/weeks/7/)
+
+- Lecture 7 - [Official Notes](https://cs50.harvard.edu/python/2022/notes/7/) - 
+
+- Problem Set 7 - 
