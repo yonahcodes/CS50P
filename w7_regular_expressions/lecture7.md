@@ -262,4 +262,8 @@ A|B     either A or B
 (...)   a group
 (?:...) non-capturing version
 ```
-# Lecture 00:56:00
+<br>
+
+## Case Sensitivity
+
+Lecture 00:56:00
