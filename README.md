@@ -93,6 +93,6 @@ In this repository I will be documenting my progress in Harvard University's int
 
 ## [7 - Regular Expressions](https://cs50.harvard.edu/python/2022/weeks/7/)
 
-- Lecture 7 - [Official Notes](https://cs50.harvard.edu/python/2022/notes/7/) - 
+- Lecture 7 - [Official Notes](https://cs50.harvard.edu/python/2022/notes/7/) - [Notes](w7_regular_expressions/lecture7.md)
 
 - Problem Set 7 - 

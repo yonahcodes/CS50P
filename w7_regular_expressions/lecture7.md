@@ -537,7 +537,7 @@ if matches := re.search(r"^https?://(?:www\.)?twitter\.com/(.+)$", url, re.IGNOR
 
 <br>
 
-9. 
+9. `[]`
 ```py
 import re
 
