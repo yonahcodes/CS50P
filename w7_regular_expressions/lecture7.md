@@ -1,5 +1,5 @@
 # CS50 W7 - Regular Expressions
-Regular expressions or **"regexes"** will enable us to examine **patterns** within our code. They allow us to search, match, and manipulate **strings** based on specific patterns, making them highly useful for tasks like validation, parsing, and text processing.
+Regular expressions or **"regexes"** will enable us to examine **patterns** within our code. They allow us to search, match, and manipulate **strings** based on specific patterns, making them highly useful for tasks like validation, parsing, and text processing. https://docs.python.org/3/library/re.html
 
 <br>
 
@@ -264,6 +264,248 @@ A|B     either A or B
 ```
 <br>
 
-## Case Sensitivity
+## Case Sensitivity - `flags=`
 
-Lecture 00:56:00
+Recall that within the `re.search` function, there is a parameter for flags **re.search(pattern, string, `flags=0`)**. 
+
+Some built-in flag variables:
+```
+re.IGNORECASE
+re.MULTILINE
+re.DOTALL
+```
+<br>
+
+10. `re.IGNORECASE`
+```py
+import re
+
+email = input("What's your email? ").strip()
+
+if re.search(r"^\w+@\w+\.edu$", email, re.IGNORECASE):
+    print("Valid")
+else:
+    print("Invalid")
+```
+> The input `MALAN@HARVARD.EDU` would now be valid.
+
+<br>
+
+11. `?`
+
+Notice that the email address `malan@cs50.harvard.edu` would be considered invalid because of the additional `.` 
+```py
+import re
+
+email = input("What's your email? ").strip()
+
+if re.search(r"^\w+@(\w+\.)?\w+\.edu$", email, re.IGNORECASE):
+    print("Valid")
+else:
+    print("Invalid")
+```
+> In this version we added a new grouped expression `(\w+\.)?`, that means to accept an alphanumeric character or underscore (`\w1`), 1 or more times (`+`), and a literal dot (`.`), followed by the `?` quantifier, that makes the entire group optional. (Remember that the symbol `?`, means 0 or 1 repetitions.)
+
+> Now inputs `malan@cs50.harvard.edu` and `malan@harvard.edu` are considered valid.
+
+<br>
+
+The full **regular expression** used by most browsers to validate email addresses is far more complicated than the one we implemented. It looks like this:
+```
+^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$`
+```
+Thankfully, we can, and should, take advantage of **libraries** built by experienced programmers that simplify the process of validating an email adress.
+
+<br>
+
+## Clearning Up User Input
+
+<br>
+
+1. `format.py`
+```py
+name = input("What's your name? ").strip()
+print(f"hello, {name}")
+```
+> This program expects users to input their names. The user could input their name in whatever order they decide (`Malan, David`). This could make it difficult to **standardize** how names are stored and used by our program.
+
+<br>
+
+2. 
+```py
+name = input("What's your name? ").strip()
+
+if "," in name:
+    last, first = name.split(", ")
+    name = f"{first} {last}"
+
+print(f"hello, {name}")
+```
+> `last, first = name.split(", ")` is run if there's a `,` in the name. The name is then standardized as **first** and **last**.
+
+> If the user enters `Malan,David` with no spaces, the compiler will throw and error.
+
+<br>
+
+3. `()` - `.groups()`
+```py
+import re
+
+name = input("What's your name? ").strip()
+matches = re.search(r"^(.+), (.+)$", name)
+
+if matches:
+    last, first = matches.groups()
+    name = f"{first} {last}"
+
+print(f"hello, {name}")
+```
+> The grouping symbol `(...)` has the capability of **capturing** the matching expression entered by the user. `re.search` can return those sets of matches, which we stored in the variable `matches`.
+
+> `last, first = matches.groups()` then accesses those values (`matches.groups()`) and assigns them to variables `last` and `first`.
+
+<br>
+
+4. `.group(n)`
+```py
+import re
+
+name = input("What's your name? ").strip()
+matches = re.search(r"^(.+), (.+)$", name)
+
+if matches:
+    name = matches.group(2) + " " + matches.group(1)
+    
+print(f"hello, {name}")
+```
+> Notice in this version we are requesting specific groups using singular `.group()` and **concatenating** them with a single space `" "` in the order we wanted.
+
+> `group(1)` is the first to appear, at the left of the comma.
+
+Now, we are still expecting a space after the comma as per `(.+), (.+)`. An input of `Malan,David` will not return the expected result. 
+
+<br>
+
+5. `*`
+```py
+import re
+
+name = input("What's your name? ").strip()
+matches = re.search(r"^(.+), *(.+)$", name)
+
+if matches:
+    name = matches.group(2) + " " + matches.group(1)
+    
+print(f"hello, {name}")
+```
+> Notice the addition of the `*` (0 or more repetitions) in our validation statement. Now the code will accept no spaces `Malan,David` or many spaces `Malan,    David`.
+
+<br>
+
+6. **walrus** `:=`
+```py
+import re
+
+name = input("What's your name? ").strip()
+if matches := re.search(r"^(.+), *(.+)$", name):
+    name = matches.group(2) + " " + matches.group(1)
+    
+print(f"hello, {name}")
+```
+> Notice the use of the **walrus operator** `:=`. This operator allows us to combine two lines of code by **assining a value** from right to left and **ask a Boolean question** at the same time.
+
+<br>
+
+## Extracting User Input
+
+<br>
+
+Let's build a program that extracts some specific information form user input.
+
+1. `twitter.py`
+```py
+url = input("URL: ").strip()
+print(url)
+```
+> Notice that if we type URL `https://twitter.com/davidjmalan`, it prints exactly what the user typed.
+
+<br>
+
+2. `replace()`
+```py
+url = input("URL: ").strip()
+
+username = url.replace("https://twitter.com/", "")
+print(f"Username: {username}")
+```
+> Notice the use of `replace()` method, which allows us to find part of the URL and replace it with nothing `""`.
+
+This could still be problematic if user only enters `twitter.com` instead of including the full expected format.
+
+If user enters `My URL is https://twitter.com/davidjmalan`, the output will be `My URL is davidjmalan`.
+
+<br>
+
+3. `removeprefix()`
+```py
+url = input("URL: ").strip()
+
+username = url.removeprefix("https://twitter.com/")
+print(f"Username: {username}")
+```
+> The `removeprefix()` method does not resolve our problem but does simplify the removal of the **url** and anything that preceeds it.
+
+<br>
+
+4. `re.sub()`
+
+Within the `re` library, there is a method called `sub` that allows us to substitute a pattern with something else.
+
+`re.sub(pattern, repl, string, count=0, flags=0)`.
+```py
+import re
+
+url = input("URL: ").strip()
+
+username = re.sub(r"https://twitter.com/", "", url)
+print(f"Username: {username}")
+```
+> This version of the code uses the **regular expressions** way to substitute elements but still does not cover all input variations. Also, the `.` could be interpreter improperly by the compiler.
+
+<br>
+
+5. 
+```py
+import re
+
+url = input("URL: ").strip()
+
+username = re.sub(r"^(https?://)?(www\.)?twitter\.com/", "", url)
+print(f"Username: {username}")
+```
+- `^` caret was added to signal the beginning od the match
+- `\` was added to all the dots `.`
+- `?` was added after `https` making the "s" optional to tolerate `http`
+- `(www\.)?` Was added to accept the option of including "www."
+- `(https?:\\)?` Grouping and makig not only the `s` optional with `?` but also the whole protocol.
+
+<br>
+
+> Still, we are blindly expecting that the user inputted a **url** that matche the pattern and has a **username**.
+
+<br>
+
+6. `re.search()`
+```py
+import re
+
+url = input("URL: ").strip()
+
+matches = re.search(r"^https?://(www\.)?twitter\.com/(.+)$", url, re.IGNORECASE)
+if matches:
+    print(f"Username:", matches.group(1))
+```
+> Notice how we are capturing the end of the URL using `(.+)$` regular expression and only returning if (`matches.group(1)`) **if** the user's input matches our regular expression.
+
+<br>
+
