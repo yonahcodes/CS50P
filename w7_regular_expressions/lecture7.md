@@ -402,7 +402,7 @@ print(f"hello, {name}")
 
 <br>
 
-6. **walrus** `:=`
+6. **walrus operator** `:=`
 ```py
 import re
 
@@ -491,7 +491,7 @@ print(f"Username: {username}")
 
 <br>
 
-> Still, we are blindly expecting that the user inputted a **url** that matche the pattern and has a **username**.
+> Still, we are blindly expecting that the user inputted a **url** that matches the pattern and has a **username**.
 
 <br>
 
@@ -503,9 +503,47 @@ url = input("URL: ").strip()
 
 matches = re.search(r"^https?://(www\.)?twitter\.com/(.+)$", url, re.IGNORECASE)
 if matches:
-    print(f"Username:", matches.group(1))
+    print(f"Username:", matches.group(2))
 ```
-> Notice how we are capturing the end of the URL using `(.+)$` regular expression and only returning if (`matches.group(1)`) **if** the user's input matches our regular expression.
+> Notice now, how we are capturing the end of the URL using `(.+)$` regular expression and only returning it (`matches.group(2)`) **if** the user's input matches our regular expression.
+
+> Notice the importance of respecting the order of the **groups**. Using `matches.group(1)` will return `www.` if included in the input or `None` if not included.
 
 <br>
 
+7. `(?:...)`
+```py
+import re
+
+url = input("URL: ").strip()
+
+matches = re.search(r"^https?://(?:www\.)?twitter\.com/(.+)$", url, re.IGNORECASE)
+if matches:
+    print(f"Username:", matches.group(1))
+```
+> Notice here that adding `?:` at the beginning of the **group** `(?:www\.)` will tell the compiler not to **capture** and only group the expression, so that we could access the first (and only) **captured** group `(.+)` with `matches.group(1)`.
+
+<br>
+
+8. **walrus operator** `:=`
+```py
+import re
+
+url = input("URL: ").strip()
+
+if matches := re.search(r"^https?://(?:www\.)?twitter\.com/(.+)$", url, re.IGNORECASE):
+    print(f"Username:", matches.group(1))
+```
+
+<br>
+
+9. 
+```py
+import re
+
+url = input("URL: ").strip()
+
+if matches := re.search(r"^https?://(?:www\.)?twitter\.com/([a-z0-9_]+)$", url, re.IGNORECASE):
+    print(f"Username:", matches.group(1))
+```
+> Notice in this version that we used `([a-z0-9_]+)` to only accept twitter's valid username format.
