@@ -547,3 +547,138 @@ if matches := re.search(r"^https?://(?:www\.)?twitter\.com/([a-z0-9_]+)$", url, 
     print(f"Username:", matches.group(1))
 ```
 > Notice in this version that we used `([a-z0-9_]+)` to only accept twitter's valid username format.
+
+<br>
+
+## `groups.py`
+Program that validates international phone numbers.
+
+<br>
+
+1. 
+```py
+import re
+
+# Dictionary of country codes and corresponding countries
+locations = {"+1": "United States and Canada", "+62": "Indonesia", "+505": "Nicaragua"}
+
+def main():
+    # Define the pattern for the expected phone number format
+    # using a raw string regular expression
+    pattern = r"\+\d{1,3} \d{3}-\d{3}-\d{4}"
+
+    # Prompt user for a phone numner input and store in variable "number"
+    number = input("Number: ")
+
+    # Use the re.search() function to check if input matches the pattern
+    # and store result in the match object
+    match = re.search(pattern, number)
+    
+    if match:
+        # If the input matches the pattern, print "Valid"
+        print("Valid")
+    else:
+        # If the input does not match the pattern, print "Invalid"
+        print("Invalid")
+
+
+if __name__ == "__main__":
+    main()
+```
+```
+r"\+\d{1,3} \d{3}-\d{3}-\d{4}"
+```
+- `\+` means to treat the plus sign `+` literally.
+- `\d` means decimal digit
+- `{1,3}` means 1 to 3 repetitions
+
+<br>
+
+2. Capture groups `()`
+```py
+import re
+
+locations = {"+1": "United States and Canada", "+62": "Indonesia", "+505": "Nicaragua"}
+
+def main():
+    # Add capture group for the country codes "(\+\d{1,3})"
+    pattern = r"(\+\d{1,3}) \d{3}-\d{3}-\d{4}"
+    number = input("Number: ")
+
+    match = re.search(pattern, number)
+
+    if match:
+        # Access the first capture group and store in `country_code`
+        country_code = match.group(1)
+
+        # Print country code
+        print(country_code)
+    else:
+        print("Invalid")
+
+
+if __name__ == "__main__":
+    main()
+```
+<br>
+
+3. Using capture group as key to access value in dictionary
+```py
+import re
+
+locations = {"+1": "United States and Canada", "+62": "Indonesia", "+505": "Nicaragua"}
+
+def main():
+    # Add capture group for the country codes "(\+\d{1,3})"
+    pattern = r"(\+\d{1,3}) \d{3}-\d{3}-\d{4}"
+    number = input("Number: ")
+
+    match = re.search(pattern, number)
+
+    if match:
+        # Access the first capture group and store in `country_code`
+        country_code = match.group(1)
+
+        # Retrieve and print country corresponding to country code 
+        print(locations[country_code])
+    else:
+        print("Invalid")
+
+
+if __name__ == "__main__":
+    main()
+```
+> Notice the use of `country_code` as a key to access corresponding value (country)
+
+<br>
+
+4. Naming capture group for better access
+```py
+import re
+
+locations = {"+1": "United States and Canada", "+62": "Indonesia", "+505": "Nicaragua"}
+
+def main():
+    # Naming capture group pattern for easy access
+    pattern = r"(?P<country_code>\+\d{1,3}) \d{3}-\d{3}-\d{4}"
+    number = input("Number: ")
+
+    match = re.search(pattern, number)
+
+    if match:
+        # Access the capture group with its name "country_code"
+        country_code = match.group("country_code")
+
+        # Retrieve and print country corresponding to country code
+        print(locations[country_code])
+    else:
+        print("Invalid")
+
+
+if __name__ == "__main__":
+    main()
+```
+> Notice the syntax to name a capture group within a regular expression `(?P<name>...)`
+
+<br>
+
