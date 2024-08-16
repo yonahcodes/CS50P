@@ -571,7 +571,7 @@ def main():
     number = input("Number: ")
 
     # Use the re.search() function to check if input matches the pattern
-    # and store result in the match object
+    # and store result (match object) in the match variable
     match = re.search(pattern, number)
     
     if match:
@@ -682,3 +682,57 @@ if __name__ == "__main__":
 
 <br>
 
+## `code.py`
+
+A Hexadecimal color code:
+- Begins with #
+- Is composed of 6 characters
+- 0-9 and A-F (or a-f)
+
+<br>
+
+Examples:
+```
+Black: #000000 
+White: #FFFFFF
+Red: #FF0000
+Blue: #0000FF
+Green: #00FF00
+```
+<br>
+
+Program that validates Hexadecimal color codes
+```py
+import re
+
+
+def main():
+    # Prompt user for color code
+    code = input("Hexadecimal color code: ")
+
+    # Define the pattern for the expected hexadecimal color code
+    # using a raw string regular expression
+    pattern = r"^#[a-fA-F0-9]{6}$"
+
+    # Use the re.search() function to check if input matches the pattern
+    # and store result (match object) in the match variable
+    match = re.search(pattern, code)
+
+    if match:
+        # If the input matches the pattern, print Valid and what it matched with
+        print(f"Valid. Matched with {match.group()}")
+    else:
+        # If the input does not match the pattern, print "Invalid"
+        print("Invalid")
+
+
+if __name__ == "__main__":
+    main()
+```
+```
+r"^#[a-fA-F0-9]{6}$"
+```
+- `^#` means that `#` must be the first character of the input 
+- `[a-fA-F0-9]` determines the set of characters (ranges) accepted 
+- `{6}` means 6 repetitions
+- `$` means that the last characters must be the `{6}` characters in the range of pattens.
