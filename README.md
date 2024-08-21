@@ -95,4 +95,5 @@ In this repository I will be documenting my progress in Harvard University's int
 
 - Lecture 7 - [Official Notes](https://cs50.harvard.edu/python/2022/notes/7/) - [Notes](w7_regular_expressions/lecture7.md)
 
-- Problem Set 7 - 
+- Problem Set 7 - [Notes](w7_regular_expressions/problem_set7.md)
+  - NUMB3RS - [numb3rs.py](w7_regular_expressions/numb3rs/numb3rs.py) - [test_numb3rs.py](w7_regular_expressions/numb3rs/test_numb3rs.py)
