@@ -314,11 +314,11 @@ The full **regular expression** used by most browsers to validate email addresse
 ```
 ^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$`
 ```
-Thankfully, we can, and should, take advantage of **libraries** built by experienced programmers that simplify the process of validating an email adress.
+Thankfully, we can, and should, take advantage of **libraries** built by experienced programmers that simplify the process of validating an email address.
 
 <br>
 
-## Clearning Up User Input
+## Cleaning Up User Input
 
 <br>
 
