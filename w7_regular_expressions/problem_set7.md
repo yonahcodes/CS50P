@@ -27,6 +27,10 @@ Either before or after you implement `validate` in `numb3ers.py`, additionally i
 <br>
 
 ```py
+import re
+import sys
+```
+```py
 pattern = (r"^([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$")
 ```
 ```py
@@ -35,10 +39,58 @@ match = re.search(pattern, ip)
 ```py
 import pytest
 from numb3rs import validate
-
+```
+```py
 def test_one_digit():
     assert validate("1.2.3.4") == True
 ```
 <br>
 
 ## Watch on YouTube
+In a YouTube video, if you click **Share**, then **Embed**, you will see the **HTML** code that you can copy into your own website's source code.
+
+```
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xvFZjo5PgG0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+```
+> `iframe` is an **HTML** "element", and `src` is one of several HTML "attributes" therein, the value of which, between quotes, is the URL of the video.
+
+<br>
+
+Because some HTML attributes are optional, you could instead minimally embed:
+```
+<iframe src="https://www.youtube.com/embed/xvFZjo5PgG0"></iframe>
+```
+<br>
+
+Implement a function called `parse` that expects a `str` of HTML as input, extracts any YouTube URL that's the value of a `src` attribute of an `iframe` element, and returns its shorter, shareable `youtu.be` equivalent as a `str`. 
+
+- Expect that any such URL will be in one of the formats below.
+- Assume that the value of `src` will be surrounded by double quotes.
+- Assume that the input will contain no more than one such URL.
+- If the input does not contain any such URL at all, return `None`.
+
+<br>
+
+```
+http://youtube.com/embed/xvFZjo5PgG0
+https://youtube.com/embed/xvFZjo5PgG0
+https://www.youtube.com/embed/xvFZjo5PgG0
+``` 
+<br>
+
+Structure `watch.py` as follows, wherein you're welcome to modify `main` and/or implement other functions as you see fit, but you may not import any other libraries. You are welcome, but not required, to use `re` and/or `sys`.
+```py
+import re
+import sys
+
+def main():
+    print(parse(input("HTML: ")))
+
+def parse(s):
+    ...
+
+...
+
+if __name__ == "__main__":
+    main()
+```
