@@ -86,7 +86,7 @@ else:
 
 <br>
 
-To enhannce our programs functionality, we need to introduce `validation` vocabulary. In **regular expressions** there are **symbols** that allow us to identify **patterns**:
+To enhance our programs functionality, we need to introduce `validation` vocabulary. In **regular expressions** there are **symbols** that allow us to identify **patterns**:
 ```
 .   any character except a new line
 *   0 or more repetitions
@@ -412,7 +412,7 @@ if matches := re.search(r"^(.+), *(.+)$", name):
     
 print(f"hello, {name}")
 ```
-> Notice the use of the **walrus operator** `:=`. This operator allows us to combine two lines of code by **assining a value** from right to left and **ask a Boolean question** at the same time.
+> Notice the use of the **walrus operator** `:=`. This operator allows us to combine two lines of code by **assigning a value** from right to left and **ask a Boolean question** at the same time.
 
 <br>
 
@@ -453,7 +453,7 @@ url = input("URL: ").strip()
 username = url.removeprefix("https://twitter.com/")
 print(f"Username: {username}")
 ```
-> The `removeprefix()` method does not resolve our problem but does simplify the removal of the **url** and anything that preceeds it.
+> The `removeprefix()` method does not resolve our problem but does simplify the removal of the **url** and anything that precedes it.
 
 <br>
 
@@ -487,7 +487,7 @@ print(f"Username: {username}")
 - `\` was added to all the dots `.`
 - `?` was added after `https` making the "s" optional to tolerate `http`
 - `(www\.)?` Was added to accept the option of including "www."
-- `(https?:\\)?` Grouping and makig not only the `s` optional with `?` but also the whole protocol.
+- `(https?:\\)?` Grouping and making not only the `s` optional with `?` but also the whole protocol.
 
 <br>
 
@@ -567,7 +567,7 @@ def main():
     # using a raw string regular expression
     pattern = r"\+\d{1,3} \d{3}-\d{3}-\d{4}"
 
-    # Prompt user for a phone numner input and store in variable "number"
+    # Prompt user for a phone number input and store in variable "number"
     number = input("Number: ")
 
     # Use the re.search() function to check if input matches the pattern
