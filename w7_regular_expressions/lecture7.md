@@ -470,7 +470,7 @@ url = input("URL: ").strip()
 username = re.sub(r"https://twitter.com/", "", url)
 print(f"Username: {username}")
 ```
-> This version of the code uses the **regular expressions** way to substitute elements but still does not cover all input variations. Also, the `.` could be interpreter improperly by the compiler.
+> This version of the code uses the **regular expressions** way to substitute elements but still does not cover all input variations. Also, the `.` could be interpreted improperly by the compiler.
 
 <br>
 
@@ -483,7 +483,7 @@ url = input("URL: ").strip()
 username = re.sub(r"^(https?://)?(www\.)?twitter\.com/", "", url)
 print(f"Username: {username}")
 ```
-- `^` caret was added to signal the beginning od the match
+- `^` caret was added to signal the beginning of the match
 - `\` was added to all the dots `.`
 - `?` was added after `https` making the "s" optional to tolerate `http`
 - `(www\.)?` Was added to accept the option of including "www."

@@ -74,10 +74,10 @@ In this repository I will be documenting my progress in Harvard University's int
 - Lecture 5 - [Official Notes](https://cs50.harvard.edu/python/2022/notes/5/) - [Notes](w5_unit-tests/lecture5.md)
 
 - Problem Set 5 - [Notes](w5_unit-tests/problem_set5.md)
-    - Testing my twttr -  [twttr.py](w5_unit-tests/test_twttr/twttr.py) - [test_twttr.py](w5_unit-tests/test_twttr/test_twttr.py)
-    - Back to the Bank - [bank.py](w5_unit-tests/test_bank/bank.py) - [test_bank.py](w5_unit-tests/test_bank/test_bank.py)
-    - Re-requesting a Vanity Plate - [plates.py](w5_unit-tests/test_plates/plates.py) - [test_plates.py](w5_unit-tests/test_plates/test_plates.py)
-    - Refueling - [fuel.py](w5_unit-tests/test_fuel/fuel.py) - [test_fuel.py](w5_unit-tests/test_fuel/test_fuel.py)
+    - Testing my twttr: [twttr.py](w5_unit-tests/test_twttr/twttr.py) - [test_twttr.py](w5_unit-tests/test_twttr/test_twttr.py)
+    - Back to the Bank: [bank.py](w5_unit-tests/test_bank/bank.py) - [test_bank.py](w5_unit-tests/test_bank/test_bank.py)
+    - Re-requesting a Vanity Plate: [plates.py](w5_unit-tests/test_plates/plates.py) - [test_plates.py](w5_unit-tests/test_plates/test_plates.py)
+    - Refueling: [fuel.py](w5_unit-tests/test_fuel/fuel.py) - [test_fuel.py](w5_unit-tests/test_fuel/test_fuel.py)
   <br><br>
 
 ## [6 - File I/O](https://cs50.harvard.edu/python/2022/weeks/6/)
@@ -96,4 +96,5 @@ In this repository I will be documenting my progress in Harvard University's int
 - Lecture 7 - [Official Notes](https://cs50.harvard.edu/python/2022/notes/7/) - [Notes](w7_regular_expressions/lecture7.md)
 
 - Problem Set 7 - [Notes](w7_regular_expressions/problem_set7.md)
-  - NUMB3RS - [numb3rs.py](w7_regular_expressions/numb3rs/numb3rs.py) - [test_numb3rs.py](w7_regular_expressions/numb3rs/test_numb3rs.py)
+  - NUMB3RS: [numb3rs.py](w7_regular_expressions/numb3rs/numb3rs.py) - [test_numb3rs.py](w7_regular_expressions/numb3rs/test_numb3rs.py)
+  - [Watch on YouTube](w7_regular_expressions/watch.py)
