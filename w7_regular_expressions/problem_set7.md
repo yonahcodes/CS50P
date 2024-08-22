@@ -105,3 +105,28 @@ if matches := re.search(r'src="https?://(?:www\.)?youtube\.com/embed/([a-zA-Z0-9
 ```
 <br>
 
+## Working 9 to 5
+
+Most countries use a **24-hour** clock, the United States tends to use a **12-hour** clock. Instead of `09:00 to 17:00`, many Americans would say `9:00 AM to 5:00PM` ("AM" is an abbreviation for "ante meridiem" and "PM" is an abbreviation of "post meridiem", "meridiem" means midday or noon).
+
+Just as `12:00 AM` in 12-hour format would be `00:00` in 24-hour format, so would `12:01 AM` through `12:59 AM` be `00:01` through `00:59`, respectively.
+
+<br>
+
+In a file called `working.py`, implement a function called `convert` that expects a `str` in any of the 12-hour formats below and returns the corresponding `str` in 24-hour format.
+- Expect that **AM** and **PM** will be capitalized (with no periods) and that there will be a space before each.
+- Assume that these times are representative of actual times.
+```
+9:00 AM to 5:00 PM
+9 AM to 5 PM
+9:00 AM to 5 PM
+9 AM to 5:00 PM
+```
+<br>
+
+- Raise a `ValueError` instead if the input to `convert` is not either of those formats or if either time is invalid (e.g., 12:60 AM, 13:00 PM, etc.).
+- Do not assume that someone's hours will start ante meridiem and end post meridiem.
+
+<br>
+
+Either before or after you implement convert in `working.py`, additionally implement, in a file called `test_working.py`, three or more functions that collectively test your implementation of convert thoroughly.
