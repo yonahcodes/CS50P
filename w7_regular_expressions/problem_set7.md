@@ -104,3 +104,4 @@ if matches := re.search(r'src="https?://(?:www\.)?youtube\.com/embed/([a-zA-Z0-9
     return f"https://youtu.be/{matches.group(1)}"
 ```
 <br>
+
