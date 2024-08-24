@@ -39,7 +39,7 @@ def clean_data(input_csv, output_csv):
                 last, first = row["name"].strip('"').split(",")
                 # House key stays the same
                 house = row["house"]
-                # write row to new csv specifiying dictionary to be passed
+                # write row to new csv specifying dictionary to be passed
                 writer.writerow({"first": first.strip(), "last": last.strip(), "house":house})
 
     # Handle file not found error

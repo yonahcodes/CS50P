@@ -29,7 +29,7 @@ def is_valid(s):
             elif c != "0":
                 zero_digit_found = True
 
-        # If any char is a letter and is preceeded by a digit, return False
+        # If any char is a letter and is preceded by a digit, return False
         if c.isalpha() and i != 0 and s[i - 1].isdigit():
             return False
 

@@ -41,7 +41,7 @@ def shirtify(input_img, output_img):
             size = shirt.size
             image = ImageOps.fit(image, size)
 
-            # Paste the shirt image onto the resizer input image using shirt as a mask
+            # Paste the shirt image onto the resize input image using shirt as a mask
             image.paste(shirt, (0, 0), shirt)
 
             # Save final image

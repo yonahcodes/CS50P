@@ -40,7 +40,7 @@ def ascii_art(csv_file):
                 table.append(row)
 
         # Pass the `table` list, specify that headers are the keys,
-        # and specify table forma to the tabualte function,
+        # and specify table forma to the tabulate function,
         # which will return ASCII table
         return tabulate(table, headers="keys", tablefmt="grid")
 
