@@ -132,3 +132,57 @@ In a file called `working.py`, implement a function called `convert` that expect
 Either before or after you implement convert in `working.py`, additionally implement, in a file called `test_working.py`, three or more functions that collectively test your implementation of convert thoroughly.
 
 <br> 
+
+**working.py**
+```py
+import re
+import sys
+```
+```py
+pattern = r"^(1[0-2]|[1-9]):?([0-5][0-9])?\s(AM|PM)\sto\s(1[0-2]|[1-9]):?([0-5][0-9])?\s(AM|PM)$"
+```
+```py
+if match := re.search(pattern, s):
+
+    if not "12" in match.group(1) and "PM" in match.group(3):
+        hours1 = int(match.group(1)) + 12
+    elif "12" in match.group(1) and "AM" in match.group(3):
+                hours1 = 00
+    else:
+        hours1 = int(match.group(1))
+
+    minutes1 = match.group(2) if match.group(2) else "00"
+
+    ...
+        ...
+```
+```py
+return f"{hours1:02}:{minutes1} to {hours2:02}:{minutes2}"
+```
+```py
+except ValueError:
+    raise ValueError("Invalid time format")
+```
+<br>
+
+**test_working.py**
+```py
+import pytest
+from working import convert
+```
+```py
+def test_hours():
+    assert convert("9 AM to 5 PM") == "09:00 to 17:00"
+    ...
+```
+```py
+def test_hours_minutes():
+    assert convert("9:21 AM to 5:11 PM") == "09:21 to 17:11"
+    ...
+```
+```py
+def test_exception():
+    with pytest.raises(ValueError):
+        convert("9:60 AM to 5:60 PM")
+```
+<br>
