@@ -193,3 +193,33 @@ In a file called `um.py`, implement a function called `count` that expects a lin
 Either before or after you implement `count` in `um.py`, additionally implement, in a file called `test_um.py`, three or more functions that collectively test your implementation of count thoroughly.
 
 <br>
+
+**um.py**
+```py
+pattern = r"\bum\b"
+matches = re.findall(pattern, s, re.IGNORECASE)
+```
+```py
+count = len(matches)
+```
+<br>
+
+**test_um.py**
+```py
+def test_just_um():
+    assert count("um") == 1
+    assert count("um um") == 2
+    ...
+```
+```py
+def test_sentences():
+    assert count("Thanks for, um, the ride.") == 1
+    assert count("Um, what's this, um... thingy?") == 2
+    ...
+```
+```py
+def test_part_of_word():
+    assert count("circumstances") == 0
+    assert count("instrument") == 0
+    ...
+```
