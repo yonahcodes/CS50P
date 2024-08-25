@@ -97,5 +97,5 @@ In this repository I will be documenting my progress in Harvard University's int
 
 - Problem Set 7 - [Notes](w7_regular_expressions/problem_set7.md)
   - NUMB3RS: [numb3rs.py](w7_regular_expressions/numb3rs/numb3rs.py) - [test_numb3rs.py](w7_regular_expressions/numb3rs/test_numb3rs.py)
-  - [Watch on YouTube](w7_regular_expressions/watch.py)
-  - Working 9 to 5: [working.py](working/working.py) - [test_working.py](working/test_working.py)
+  - Watch on YouTube: [watch.py](w7_regular_expressions/watch.py)
+  - Working 9 to 5: [working.py](w7_regular_expressions/working/working.py) - [test_working.py](w7_regular_expressions/working/test_working.py)
