@@ -101,3 +101,8 @@ In this repository I will be documenting my progress in Harvard University's int
   - Working 9 to 5: [working.py](w7_regular_expressions/working/working.py) - [test_working.py](w7_regular_expressions/working/test_working.py)
   - Regular, um, Expressions: [um.py](w7_regular_expressions/um/um.py) - [test_um.py](w7_regular_expressions/um/test_um.py)
   - Response Validation: [response.py](w7_regular_expressions/response.py)
+<br><br>
+
+## [8 - Object-Oriented Programming](https://cs50.harvard.edu/python/2022/weeks/8/)
+
+- Lecture 7 - [Official Notes](https://cs50.harvard.edu/python/2022/notes/8/)
