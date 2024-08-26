@@ -223,3 +223,23 @@ def test_part_of_word():
     assert count("instrument") == 0
     ...
 ```
+<br>
+
+## Response Validation
+When creating a **Google Form** that prompts users for an answer, it's possible to enable **response validation** and require that the user's input match a **regular expression**.
+
+In a file called `response.py`, using either **validator-collection** or **validators** from PyPI, implement a program that prompts the user for an email address via `input` and then print `Valid` or `Invalid`, respectively, if the input is a syntactically valid email address.
+
+- You may not use `re`.
+- Do not validate whether the email address's domain name actually exists.
+
+```py
+import validators
+```
+```py
+def validate(e):
+    if validators.email(e):
+        return "Valid"
+    else:
+        return "Invalid"
+```

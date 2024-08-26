@@ -25,5 +25,6 @@ termcolor==2.4.0
 typeguard==4.3.0
 typing_extensions==4.12.2
 urllib3==2.2.2
+validators==0.33.0
 Werkzeug==3.0.4
 wheel==0.44.0
