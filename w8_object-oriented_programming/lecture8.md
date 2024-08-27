@@ -69,3 +69,42 @@ if __name__ == "__main__":
 
 <br>
 
+5. 
+```py
+def main():
+    student = get_student()
+    if student[0] == "Padma":
+        student[1] = "Ravenclaw"
+    print(f"{student[0]} from {student[1]}")
+
+def get_student():
+    name = input("Name: ")
+    house = input("House: ")
+    return (name, house)
+
+if __name__ == "__main__":
+    main()
+```
+> Notice that this code produces an error. `'tuple' object does not support item assignment`. Since `tuples` are **immutable**, we are not able to reassign the value of `student[1]`.
+
+<br>
+
+6. `list`
+```py
+def main():
+    student = get_student()
+    if student[0] == "Padma":
+        student[1] = "Ravenclaw"
+    print(f"{student[0]} from {student[1]}")
+
+def get_student():
+    name = input("Name: ")
+    house = input("House: ")
+    return [name, house]
+
+if __name__ == "__main__":
+    main()
+```
+> If we want to use a `list` instead, to provide some more flexibility, we can change the return value tuple `(name, house)` to a list by putting the return values in brackets `[name, house]`.
+
+<br>
