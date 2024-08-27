@@ -1,4 +1,4 @@
-# CS50 W6 - File I/O
+# CS50P W6 - File I/O
 `File I/O` refers to the process of reading data from and writing data to files.
 
 1. 

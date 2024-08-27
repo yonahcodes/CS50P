@@ -1,4 +1,4 @@
-# CS50 W7 - Regular Expressions
+# CS50P W7 - Regular Expressions
 Regular expressions or **"regexes"** will enable us to examine **patterns** within our code. They allow us to search, match, and manipulate **strings** based on specific patterns, making them highly useful for tasks like validation, parsing, and text processing. https://docs.python.org/3/library/re.html
 
 <br>
