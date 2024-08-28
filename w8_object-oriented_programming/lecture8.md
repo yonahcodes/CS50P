@@ -27,9 +27,9 @@ def get_house():
 if __name__ == "__main__":
     main()
 ```
-<br>
+<br><br>
 
-3. `tuple`
+3. `tuple`: Ordered collection of items that are **immutable**.
 ```py
 def main():
     name, house = get_student()
@@ -87,9 +87,9 @@ if __name__ == "__main__":
 ```
 > Notice that this code produces an error. `'tuple' object does not support item assignment`. Since `tuples` are **immutable**, we are not able to reassign the value of `student[1]`.
 
-<br>
+<br><br>
 
-6. `list`
+6. `list`: Ordered collection of items that are **mutable**.
 ```py
 def main():
     student = get_student()
@@ -107,9 +107,9 @@ if __name__ == "__main__":
 ```
 > If we want to use a `list` instead, to provide some more flexibility, we can change the return value tuple `(name, house)` to a list by putting the return values in brackets `[name, house]`.
 
-<br>
+<br><br>
 
-7. `dict`
+7. `dict`: Collection of **key-value pairs** where each key is unique. They are **unordered** and **mutable**.
 ```py
 def main():
     student = get_student()
@@ -166,3 +166,47 @@ if __name__ == "__main__":
 
 ## Classes
 
+In object-oriented programming, a `class` is a *blueprint* or *template* for creating objects, defining their `attributes` (data) and `methods` (functions). Python **classes** allow us to create data structures, define their behavior and give them a name.
+
+https://docs.python.org/3/tutorial/classes.html
+
+1. 
+```py
+class Student:
+    ...
+
+def main():
+    student = get_student()
+    print(f"{student.name} from {student.house}")
+
+
+def get_student():
+    student = Student()
+    student.name = input("Name: ")
+    student.house = input("House: ")
+    return student
+
+if __name__ == "__main__":
+    main()
+```
+> Notice on top of the file, we created a **class** called `Student` (Capitalized for convention) that we are going to complete later.
+
+<br>
+
+- `student = Student()` creates a variable `student` of class `Student`.
+- We used **"dot notation"** to access *attibutes* of this variable `student` of class `Student` (`student.name`).
+
+<br>
+
+### Objects
+When we create a **class** and use it to generate something, we create an **"object"** or an **"instance"**. In our code, `student` is an object.
+```py
+student = Student()
+```
+In **OOP**, an **object** is an instance of a **class**. It represents a specific entity that has the **arrtibutes** (data) and **behavior** (methods) that are related to that entity.
+
+<br>
+
+### Instance Methods
+
+00:38:42
