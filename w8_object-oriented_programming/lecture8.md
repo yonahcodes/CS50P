@@ -69,7 +69,7 @@ if __name__ == "__main__":
 
 <br>
 
-5. 
+5. Special case
 ```py
 def main():
     student = get_student()
@@ -108,3 +108,61 @@ if __name__ == "__main__":
 > If we want to use a `list` instead, to provide some more flexibility, we can change the return value tuple `(name, house)` to a list by putting the return values in brackets `[name, house]`.
 
 <br>
+
+7. `dict`
+```py
+def main():
+    student = get_student()
+    print(f"{student['name']} from {student['house']}")
+
+def get_student():
+    student = {}
+    student["name"] = input("Name: ")
+    student["house"] = input("House: ")
+    return student
+
+if __name__ == "__main__":
+    main()
+```
+> We could also use a `dict` and return two **key-value** pairs. We can now index into the dictionary using the **keys** instead of learning which index number corresponds to which value.
+
+<br>
+
+8. 
+```py 
+def main():
+    student = get_student()
+    print(f"{student['name']} from {student['house']}")
+
+def get_student():
+    name = input("Name: ")
+    house = input("House: ")
+    return {"name": name, "house": house}
+
+if __name__ == "__main__":
+    main()
+```
+> In this version, we remove the variable student and use `{}` in the return statement to directly create it and return it.
+
+<br>
+
+9. Special case
+```py
+def main():
+    student = get_student()
+    if student["name"] == "Padma":
+        student["house"] = "Ravenclaw"
+    print(f"{student['name']} from {student['house']}")
+
+def get_student():
+    name = input("Name: ")
+    house = input("House: ")
+    return {"name": name, "house": house}
+
+if __name__ == "__main__":
+    main()
+```
+<br>
+
+## Classes
+
