@@ -194,19 +194,37 @@ if __name__ == "__main__":
 <br>
 
 - `student = Student()` creates a variable `student` of class `Student`.
-- We used **"dot notation"** to access *attibutes* of this variable `student` of class `Student` (`student.name`).
+- We used **"dot notation"** to access *attributes* of this variable `student` of class `Student` (`student.name`).
 
 <br>
 
-### Objects
 When we create a **class** and use it to generate something, we create an **"object"** or an **"instance"**. In our code, `student` is an object.
 ```py
 student = Student()
 ```
-In **OOP**, an **object** is an instance of a **class**. It represents a specific entity that has the **arrtibutes** (data) and **behavior** (methods) that are related to that entity.
+In **OOP**, an **object** is an instance of a **class**. It represents a specific entity that has the **attributes** (data) and **behavior** (methods) that are related to that entity.
 
 <br>
 
-### Instance Methods
+2. 
+```py
+class Student:
+    ...
 
-00:38:42
+def main():
+    student = get_student()
+    print(f"{student.name} from {student.house}")
+
+
+def get_student():
+    name = input("Name: ")
+    house = input("House: ")
+    Student(name, house)
+    return student
+
+if __name__ == "__main__":
+    main()
+```
+> 
+
+> 
