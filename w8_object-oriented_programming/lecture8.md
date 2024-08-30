@@ -1,4 +1,5 @@
 # CS50P W8 - Object-Oriented Programming
+ 
 Object-oriented programming (OOP) is a programming paradigm based on the concept of **"objects"**, which can contain data and code: data in the form of **fields** (often known as attributes or properties), and code in the form of **procedures** (often known as methods). In **OOP**, computer programs are designed by making them out of objects that interact with one another.
 
 <br>
@@ -18,11 +19,14 @@ def main():
     house = get_house()
     print(f"{name} from {house}")
 
+
 def get_name():
     return input("Name: ")
 
+
 def get_house():
     return input("House: ")
+
 
 if __name__ == "__main__":
     main()
@@ -35,10 +39,12 @@ def main():
     name, house = get_student()
     print(f"{name} from {house}")
 
+
 def get_student():
     name = input("Name: ")
     house = input("House: ")
     return name, house
+
 
 if __name__ == "__main__":
     main()
@@ -77,10 +83,12 @@ def main():
         student[1] = "Ravenclaw"
     print(f"{student[0]} from {student[1]}")
 
+
 def get_student():
     name = input("Name: ")
     house = input("House: ")
     return (name, house)
+
 
 if __name__ == "__main__":
     main()
@@ -97,10 +105,12 @@ def main():
         student[1] = "Ravenclaw"
     print(f"{student[0]} from {student[1]}")
 
+
 def get_student():
     name = input("Name: ")
     house = input("House: ")
     return [name, house]
+
 
 if __name__ == "__main__":
     main()
@@ -115,11 +125,13 @@ def main():
     student = get_student()
     print(f"{student['name']} from {student['house']}")
 
+
 def get_student():
     student = {}
     student["name"] = input("Name: ")
     student["house"] = input("House: ")
     return student
+
 
 if __name__ == "__main__":
     main()
@@ -134,10 +146,12 @@ def main():
     student = get_student()
     print(f"{student['name']} from {student['house']}")
 
+
 def get_student():
     name = input("Name: ")
     house = input("House: ")
     return {"name": name, "house": house}
+
 
 if __name__ == "__main__":
     main()
@@ -154,10 +168,14 @@ def main():
         student["house"] = "Ravenclaw"
     print(f"{student['name']} from {student['house']}")
 
+
+
 def get_student():
     name = input("Name: ")
     house = input("House: ")
     return {"name": name, "house": house}
+
+
 
 if __name__ == "__main__":
     main()
@@ -166,14 +184,17 @@ if __name__ == "__main__":
 
 ## Classes
 
-In object-oriented programming, a `class` is a *blueprint* or *template* for creating objects, defining their `attributes` (data) and `methods` (functions). Python **classes** allow us to create data structures, define their behavior and give them a name.
+In object-oriented programming (OOP), a `class` is a blueprint or template for creating objects. It defining their `attributes` (data) and `methods` (functions). Python **classes** allow us to create data structures, define their behavior and give them a **name**.
 
 https://docs.python.org/3/tutorial/classes.html
+
+<br>
 
 1. 
 ```py
 class Student:
     ...
+
 
 def main():
     student = get_student()
@@ -186,30 +207,31 @@ def get_student():
     student.house = input("House: ")
     return student
 
+
 if __name__ == "__main__":
     main()
 ```
-> Notice on top of the file, we created a **class** called `Student` (Capitalized for convention) that we are going to complete later.
+> A defined class, even when not implemented, can be used in the code.
 
 <br>
 
-- `student = Student()` creates a variable `student` of class `Student`.
-- We used **"dot notation"** to access *attributes* of this variable `student` of class `Student` (`student.name`).
+- On top of the file, we created a **class** called `Student` (Capitalized for convention) that we are going to implement later.
+
+- `student = Student()` creates a **object** `student` of class `Student`.
+
+-  `student.name` and `student.house`: We used **"dot notation"** to access *attributes* (name and house) of this variable `student` of class `Student`.
 
 <br>
 
-When we create a **class** and use it to generate something, we create an **"object"** or an **"instance"**. In our code, `student` is an object.
-```py
-student = Student()
-```
-In **OOP**, an **object** is an instance of a **class**. It represents a specific entity that has the **attributes** (data) and **behavior** (methods) that are related to that entity.
+### Constructor Method
 
-<br>
-
-2. 
+2. `__init__`
 ```py
 class Student:
-    ...
+    def __init__(self, name, house):
+        self.name = name
+        self.house = house
+
 
 def main():
     student = get_student()
@@ -219,12 +241,118 @@ def main():
 def get_student():
     name = input("Name: ")
     house = input("House: ")
-    Student(name, house)
+    student = Student(name, house)
     return student
+
 
 if __name__ == "__main__":
     main()
 ```
-> 
+> In this version we are standardizing how we pass in data to the  `Student` class. This give us more control and ability to error check.
 
-> 
+- `student = Student(name, house)` is a "Constructor call". It is calling the **function** within `class Student` with the objectif of using it's structure and customizing it by passing to it the variables `name` and `house`. The return value of calling the function is then assigned to, and in the process, creating the object `student`.
+
+- `def __init__(self, name, house):` Defines the **function** to be called within the **class**, by convention, using the `__init__` **constructor method**. It is called when creating a new object of the class and initializes the object's attributes, The first parameter is always `self` and is used to define the **instance variables**.
+
+- `self.name = name` Creates instance variable `name` and store the value of variable `name` to it in the **object**. (same goes for `self.house = house`).
+
+<br>
+
+**Let's identify each concept:** 
+### Objects
+When we create a **class** and use it to generate something, we create an **"object"** or an **"instance"**. In our code, `student` is an object.
+
+In **OOP**, an **object** is an **instance** of a **class**. It represents a specific entity that has the **attributes** (data) and **behavior** (methods) defined in the **class**.
+
+- `student = Student(name, house)` creates an object of the Student class.
+
+- `student is an object (instance)` of the Student class.
+
+<br>
+
+### Instance Methods
+An **instance method** is a type of method defined inside a **class** that can access and modify the **attributes** of a specific **object**.
+
+- `__init__(self, name, house)` is an instance method of the Student class.
+
+- It's called automatically when a new Student object is created.
+
+- The `self` parameter refers to the instance being created.
+
+<br>
+
+### Instance variables
+**Instance variables** are **attributes** are defined within **methods** of a class. They store data that can vary between different **objects** (instances) of the same class.
+
+- `self.name` is an instance variable of the Student class.
+
+- `self.house` is another instance variable of the Student class.
+
+- These are created and initialized within the `__init__` method.
+
+<br>
+
+3. Simplified
+```py
+class Student:
+    def __init__(self, name, house):
+        self.name = name
+        self.house = house
+
+
+def main():
+    student = get_student()
+    print(f"{student.name} from {student.house}")
+
+
+def get_student():
+    name = input("Name: ")
+    house = input("House: ")
+    return Student(name, house)
+
+
+if __name__ == "__main__":
+    main()
+```
+> Notice how `return Student(name, house)` removes the need to assign it to `student`. The line `student = get_student()` in the `main()` function calls `get_student()` which returns an **object** which is then assigned to `student`.
+
+<br>
+
+## `raise`
+**Object-oriented programming** encourages you to encapsulate all the functionality of a class, including error checking, within the class definition.
+
+4. 
+```py
+class Student:
+    def __init__(self, name, house):
+        
+        # If name is blank
+        if not name:
+            raise ValueError("Missing name")
+        # If house is not valid
+        if house not in ["Gryffindor", "Hufflepuff", "Ravenclaw", "Slytherin"]:
+            raise ValueError("Invalid house")
+        
+        self.name = name
+        self.house = house
+
+
+def main():
+    student = get_student()
+    print(f"{student.name} from {student.house}")
+
+
+def get_student():
+    name = input("Name: ")
+    house = input("House: ")
+    return Student(name, house)
+
+if __name__ == "__main__":
+    main()
+
+```
+> The `raise` keyword is used to **raise an exception**. We can define the kind of error to raise and the text to print to the user.
+
+<br>
+
+Lecture 1:03:00
