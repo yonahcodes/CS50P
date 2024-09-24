@@ -1,6 +1,6 @@
 # Harvardx: CS50's Introduction to Programming with Python
 
-![CS50P](img/cs50p.png)
+![CS50P](img/python.webp)
 
 ## Welcome to Lazer's CS50P Repository
 
