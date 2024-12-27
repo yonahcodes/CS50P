@@ -186,7 +186,7 @@ if __name__ == "__main__":
 
 In object-oriented programming (OOP), a `class` is a blueprint or template for creating objects. It defining their `attributes` (data) and `methods` (functions). Python **classes** allow us to create data structures, define their behavior and give them a **name**.
 
-https://docs.python.org/3/tutorial/classes.html
+[Python docs](https://docs.python.org/3/tutorial/classes.html)
 
 <br>
 
