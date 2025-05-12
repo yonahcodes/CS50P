@@ -2,12 +2,11 @@
 
 ![CS50P](img/CS50P.png)
 
-## Welcome to Yonah's CS50P Repository
+## Welcome to my CS50p Repository
 
 ### [Academic Honesty](https://cs50.harvard.edu/python/2022/honesty/)
 
 In this repository I will be documenting my progress in Harvard University's introduction to programming with Python [CS50P](https://cs50.harvard.edu/python/2022/) course. Here, you can follow my learning and find my projects and notes. Happy coding!
-<br><br>
 
 ## [0 - Functions, Variables](https://cs50.harvard.edu/python/2022/weeks/0/)
 
@@ -19,7 +18,6 @@ In this repository I will be documenting my progress in Harvard University's int
     - [Making Faces](w0_functions_variables/faces.py)
     - [Einstein](w0_functions_variables/einstein.py)
     - [Tip Calculator](w0_functions_variables/tip.py)
-<br><br>
 
 ## [1 - Conditionals](https://cs50.harvard.edu/python/2022/weeks/1/)
 
@@ -31,7 +29,6 @@ In this repository I will be documenting my progress in Harvard University's int
     - [File Extensions](w1_conditionals/extensions.py)
     - [Math Interpreter](w1_conditionals/interpreter.py)
     - [Meal Time](w1_conditionals/meal.py)
-<br><br>
 
 ## [2 - Loops](https://cs50.harvard.edu/python/2022/weeks/2/)
 
@@ -43,7 +40,6 @@ In this repository I will be documenting my progress in Harvard University's int
     - [just setting up my twttr](w2_loops/twttr.py)
     - [Vanity Plates](w2_loops/plates.py)
     - [Nutrition Facts](w2_loops/nutrition.py)
-<br><br>
 
 ## [3 - Exceptions](https://cs50.harvard.edu/python/2022/weeks/3/)
 
@@ -54,7 +50,6 @@ In this repository I will be documenting my progress in Harvard University's int
     - [Felipe's Taqueria](w3_exceptions/taqueria.py)
     - [Grocery List](w3_exceptions/grocery.py)
     - [Outdated](w3_exceptions/outdated.py)
-  <br><br>
 
 ## [4 - Libraries](https://cs50.harvard.edu/python/2022/weeks/4/)
 
@@ -67,7 +62,6 @@ In this repository I will be documenting my progress in Harvard University's int
     - [Guessing Game](w4_libraries/game.py)
     - [Little Professor](w4_libraries/professor.py)
     - [Bitcoin Price Index](w4_libraries/bitcoin.py)
-  <br><br>
 
 ## [5 - Unit Tests](https://cs50.harvard.edu/python/2022/weeks/5/)
 
@@ -78,7 +72,6 @@ In this repository I will be documenting my progress in Harvard University's int
     - Back to the Bank: [bank.py](w5_unit-tests/test_bank/bank.py) - [test_bank.py](w5_unit-tests/test_bank/test_bank.py)
     - Re-requesting a Vanity Plate: [plates.py](w5_unit-tests/test_plates/plates.py) - [test_plates.py](w5_unit-tests/test_plates/test_plates.py)
     - Refueling: [fuel.py](w5_unit-tests/test_fuel/fuel.py) - [test_fuel.py](w5_unit-tests/test_fuel/test_fuel.py)
-  <br><br>
 
 ## [6 - File I/O](https://cs50.harvard.edu/python/2022/weeks/6/)
 
@@ -89,7 +82,6 @@ In this repository I will be documenting my progress in Harvard University's int
   - [Pizza Py](w6_file-io/pizza/pizza.py)
   - [Scourgify](w6_file-io/scourgify/scourgify.py)
   - [CS50 P-Shirt](w6_file-io/shirt/shirt.py)
-  <br><br>
 
 ## [7 - Regular Expressions](https://cs50.harvard.edu/python/2022/weeks/7/)
 
@@ -101,7 +93,6 @@ In this repository I will be documenting my progress in Harvard University's int
   - Working 9 to 5: [working.py](w7_regular_expressions/working/working.py) - [test_working.py](w7_regular_expressions/working/test_working.py)
   - Regular, um, Expressions: [um.py](w7_regular_expressions/um/um.py) - [test_um.py](w7_regular_expressions/um/test_um.py)
   - Response Validation: [response.py](w7_regular_expressions/response.py)
-<br><br>
 
 ## [8 - Object-Oriented Programming](https://cs50.harvard.edu/python/2022/weeks/8/)
 
